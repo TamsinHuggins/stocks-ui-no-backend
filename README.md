@@ -1,5 +1,7 @@
 # React Stock Portfolio UI 
 
+Demo react stock portfolio UI, backend is simulated using dummy data.
+
 ## Features
 ### Transactions Component
 - Stock purchase transactions displayed (will become a GET request when backend is hooked up)
