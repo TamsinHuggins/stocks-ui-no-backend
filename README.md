@@ -26,7 +26,3 @@ npm run dev
 -  Purchase volume can be selected via input box
 - Transactions array updated with new transaction based on chosen ticker and volume (will become a POST request when backend is hooked up)
 
-### Behaviour
-
-
-![transactions](https://github.com/user-attachments/assets/304a3967-66d5-43ce-8a55-1974278ab116)
