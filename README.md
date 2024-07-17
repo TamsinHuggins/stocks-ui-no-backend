@@ -20,9 +20,9 @@ npm run dev
 
 
 ### PurchaseStock Component
-- Finds avilable stocks and their current prices (will become a GET request when backend is hooked up)
+- Finds avilable stocks and their current prices (to become a call to a 3rd party)
 - Stock ticker can be selected from drop down
 - "Buy Stock" menu appears when stock ticker selected 
--  Purchase volume can be selected via input box
-- Transactions array updated with new transaction based on chosen ticker and volume (will become a POST request when backend is hooked up)
+-  Purchase quantity can be selected via input box
+- Transactions array updated with new order based on chosen ticker and quantity (will become a POST request when backend is hooked up)
 
