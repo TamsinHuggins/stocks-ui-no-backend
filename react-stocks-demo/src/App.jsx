@@ -1,33 +1,23 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import PurchaseStock from "./components/PurchaseStock/PurchaseStock";
-import Transactions from "./components/Transactions/Transactions";
+import OrderTable from "./components/OrderTable/OrderTable";
 import { useState } from "react";
 import { buyDummyStock } from "./data/dummyData";
 
 function App() {
-  const [newTransID, setNewTransID] = useState(4); // hard coded at 4 as the backend will take over this functionality
+  const [bought, setBought] = useState(0); // currently can only be used once per page load
 
-  const handleBuy = (ticker, volume) => {
-    setNewTransID((id) => id + 1);
-    buyDummyStock(newTransID, ticker, volume);
+  const handleBuy = (ticker, quantity) => {
+    setBought(1);
+    buyDummyStock(ticker, quantity);
   };
 
   return (
     <div>
-      <Transactions />
+      <OrderTable />
       <PurchaseStock buyFunc={handleBuy} />
     </div>
   );
 }
 
 export default App;
-
-{
-  /* <BrowserRouter>
-  <Routes>
-    <Route path="transactions" element={<Transactions />} />
-    <Route path="buy" element={<PurchaseStock buyFunc={handleBuy} />} />
-  </Routes>
-</BrowserRouter>; */
-}

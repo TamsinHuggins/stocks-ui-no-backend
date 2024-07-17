@@ -5,7 +5,7 @@ const PurchaseStock = (props) => {
   const dummyStocks = getDummyStocks();
 
   const [selectedTicker, setSelectedTicker] = useState("xxx");
-  const [selectedVolume, setSelectedVolume] = useState(1);
+  const [selectedQuantity, setSelectedQuantity] = useState(1);
 
   const changeTicker = (e) => {
     const chosenTicker = e.target.value;
@@ -13,10 +13,10 @@ const PurchaseStock = (props) => {
     console.log(chosenTicker);
   };
 
-  const changeVolume = (e) => {
+  const changeQuantity = (e) => {
     console.log(typeof e.target.value);
-    const chosenVolume = Math.abs(e.target.value);
-    setSelectedVolume(chosenVolume);
+    const chosenQuantity = Math.abs(e.target.value);
+    setSelectedQuantity(chosenQuantity);
   };
 
   const findPrice = (ticker) => {
@@ -50,16 +50,18 @@ const PurchaseStock = (props) => {
           <h2>Buy {selectedTicker}</h2>
           <p>Current Price: {findPrice(selectedTicker)}</p>
 
-          <label htmlFor="volume">Volume</label>
+          <label htmlFor="Quantity">Quantity</label>
           <input
             id="orderId"
             type="number"
             min="1"
-            value={selectedVolume}
-            onChange={changeVolume}
+            value={selectedQuantity}
+            onChange={changeQuantity}
           />
 
-          <button onClick={() => props.buyFunc(selectedTicker, selectedVolume)}>
+          <button
+            onClick={() => props.buyFunc(selectedTicker, selectedQuantity)}
+          >
             Buy
           </button>
         </div>
