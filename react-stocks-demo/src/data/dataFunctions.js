@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const serverURL = "http://localhost:8080";
+const serverURL = "http://frank-docker1.neueda.com:8081/v1";
 
-export const getTransactions = () => {
+export const getOrders = () => {
   return axios({
-    url: `${serverURL}/transactions`,
+    url: `${serverURL}/trade`,
     method: "GET",
     headers: { Accept: "application/json" },
   });
