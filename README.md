@@ -15,8 +15,8 @@ npm run dev
 
 ## Features
 ### Transactions Component
-- Stock purchase transactions displayed (will become a GET request when backend is hooked up)
-- Component re-rendered when new stock is purchased
+- Stock orders displayed (will become a GET request when backend is hooked up)
+- Component re-rendered when new order placed ( may be changed to closer resemble full stack functionality)
 
 
 ### PurchaseStock Component
